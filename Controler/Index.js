@@ -1,4 +1,4 @@
-function getProduct() {
+export function getProduct() {
   let promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
     method: "get",
@@ -11,7 +11,7 @@ function getProduct() {
   });
 }
 
-function renderProduct(arrPro, idBody) {
+export function renderProduct(arrPro, idBody) {
   let html = "";
   for (let i = 0; i < arrPro.length; i++) {
     html += `
@@ -23,7 +23,7 @@ function renderProduct(arrPro, idBody) {
       <p class="descript">${arrPro[i].shortDescription}</p>
     </div>
     <div class="col-button">
-      <button class="btn-buy">Buy now</button>
+      <button class="btn-buy"> <a href="./Detail.html?productid=${arrPro[i].id}">Buy now</a></button>
       <button class="btn-price">${arrPro[i].price}$</button>
     </div>
   </div>
@@ -32,9 +32,7 @@ function renderProduct(arrPro, idBody) {
   // let test = document.getElementById(idBody)
   idBody.innerHTML = html;
 }
-// renderProduct();
 
 window.onload = function () {
   getProduct();
 };
-
