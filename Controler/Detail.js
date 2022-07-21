@@ -12,14 +12,16 @@ window.onload = function () {
   });
 
   promise.then(function (result) {
-    // console.log(result.data.content.relatedProducts);
+    // console.log(result.data.content);
     renderProductDetail(result.data.content, detail);
     renderProductRelate(result.data.content.relatedProducts, productList);
+    findSize(result.data.content.size, size);
   });
 
+  // findSize();
   function renderProductDetail(Product, idBody) {
     let product = { ...Product };
-    // console.log(product);
+    // for (let i = 0;i<product.length)
     let html = `
     <div class="container">
     <div class="main">
@@ -33,13 +35,7 @@ window.onload = function () {
         </span>
         <div id="size" class="size">
           <h5>Available size</h5>
-          <button>${product.size[0]}</button>
-          <button>${product.size[1]}</button>
-          <button>${product.size[2]}</button>
-          <button>${product.size[3]}</button>
-          <button>${product.size[4]}</button>
-          <button>${product.size[5]}</button>
-          <button>${product.size[6]}</button>
+        
 
         </div>
         <div class="price">${product.price}$</div>
@@ -59,7 +55,7 @@ window.onload = function () {
   }
   function renderProductRelate(ProductRelate, idBody) {
     // debugger
-    console.log(ProductRelate.length);
+    // console.log(ProductRelate.length);
 
     // console.log(productRelate[3]);
 
@@ -83,3 +79,19 @@ window.onload = function () {
     idBody.innerHTML = htmlRelate;
   }
 };
+
+function findSize(size, idBody) {
+  // debugger;
+  let test = size;
+  console.log(test);
+  let htmlSize = "";
+  let htmlTest = "";
+  for (let i = 0; i < test.length; i++) {
+    htmlSize += `
+    <button>${test[i]}</button>
+    
+    `;
+  }
+  console.log(idBody);
+  idBody.innerHTML = htmlSize;
+}
