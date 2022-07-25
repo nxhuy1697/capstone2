@@ -1,4 +1,4 @@
-import { getProduct, renderProduct } from "./Index.js";
+// import { getProduct, renderProduct } from "./Index.js";
 
 window.onload = function () {
   const urlParam = new URLSearchParams(window.location.search);
@@ -93,5 +93,5 @@ function findSize(size, idBody) {
     `;
   }
   console.log(idBody);
-  idBody.innerHTML = htmlSize;
+  idBody.innerHTML += htmlSize;
 }
