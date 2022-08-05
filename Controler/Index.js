@@ -74,4 +74,4 @@ function renderCarousel(arrPro, idBody) {
 
 window.onload = function () {
   getProduct();
-};
+};  
