@@ -1,0 +1,156 @@
+@import "../Base/base";
+@import "../Themes/variable";
+header {
+    background-color: $c1-bg-c;
+    .container {
+      color: $c1-text-c;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 24px 10px 24px; 
+      // .logo {
+      // }
+      .header-right {
+        display: flex;
+        justify-content: space-around; 
+        gap: 10px;
+        align-items: center;
+        .icon {
+          display: flex;
+          align-items: center;
+          gap: 10px; 
+        }
+        .login {
+          a {
+            color: $c1-text-c;  
+    
+            opacity: 0.7;
+            font-size: $c1-text-s;
+            font-weight: $c1-text-w;
+            transition: all 0.3s;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        .register {
+          a {
+            color: $c1-text-c;
+            opacity: 0.7;
+            font-size: $c1-text-s;
+            font-weight: $c1-text-w;
+            transition: all 0.3s;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    .navbar {
+      padding-left: 140px;
+      .navbar-nav {
+        .nav-item {
+          margin-right: 20px;
+          display: inline-block;
+          position: relative;
+  
+          .nav-link {
+            opacity: 0.7;
+  
+            &:hover {
+              color: $c2-text-c;
+              opacity: 1;
+              transition: width 0.5s;
+              &::after {
+                display: block;
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              background-color: $c1-bg-c;
+              bottom: 0;
+              left: 0px;
+              display: none;
+              transition: width 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+  .register{
+    .container{
+        p{
+        font-weight:$c2-text-w;
+        font-size: $c2-text-s4;
+        text-align: center;
+        }
+        .reg-content{
+            display: flex;
+            justify-content: space-around;
+            gap: 100px;
+            padding: 0 100px;
+            .reg-left{
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 50%;
+                position: relative;
+                width: 520px;
+                .input{
+                    border-bottom: 3px solid $c1-ip-c;
+                    padding-top: 30px;
+                    input{
+                        outline: none;
+                        border: none;
+                    }
+                    span{
+                        position: absolute;
+                        right: 0;
+                        color: $c5-text-c;
+                    }
+                }
+                
+            }
+            .reg-right{
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 50%;
+                position: relative;
+                width: 520px;
+                .input{
+                    border-bottom: 3px solid $c1-ip-c;
+                    padding-top: 30px;
+                    input{
+                        outline: none;
+                        border: none;
+
+                    }
+                    span{
+                        position: absolute;
+                        right: 0;
+                        color: $c5-text-c;
+                    }
+                  
+                }
+                .gender{
+
+                  span{
+                    padding: 10px 20px;
+                  }
+                }
+              .btn-submit{
+
+                background: $c1-ip-c;
+              }
+                
+            }
+        }
+    }
+  }
