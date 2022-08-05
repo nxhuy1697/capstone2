@@ -8,12 +8,11 @@ export function getProduct() {
   promise.then(function (result) {
     // console.log(result.data.content);
     renderProduct(result.data.content, productList);
-    renderCarousel(result.data.content, carousel)
+    renderCarousel(result.data.content, carousel);
   });
 }
 
 export function renderProduct(arrPro, idBody) {
-  
   let html = "";
   for (let i = 0; i < arrPro.length; i++) {
     html += `
@@ -35,13 +34,12 @@ export function renderProduct(arrPro, idBody) {
   idBody.innerHTML = html;
 }
 
-
-function renderCarousel (arrPro,idBody){
+function renderCarousel(arrPro, idBody) {
   // debugger
-let html =""
-for (let i = 0;i < arrPro.length; i++){
-  if (i === 0){
-    html += `
+  let html = "";
+  for (let i = 0; i < arrPro.length; i++) {
+    if (i === 0) {
+      html += `
   
   <div class="carousel-item active">
   <a href="Index.html"
@@ -53,9 +51,9 @@ for (let i = 0;i < arrPro.length; i++){
     <button class="btn-buy"> <a href="./Detail.html?productid=${arrPro[i].id}">Buy now</button>
   </div>
 </div>
-    `
-  }else {
-    html += `
+    `;
+    } else {
+      html += `
   
   <div class="carousel-item   ">
   <a href="Index.html"
@@ -68,15 +66,12 @@ for (let i = 0;i < arrPro.length; i++){
   </div>
 </div>
   
-  `
+  `;
+    }
   }
-}
-idBody.innerHTML = html
+  idBody.innerHTML = html;
 }
 
 window.onload = function () {
   getProduct();
 };
- 
-
-

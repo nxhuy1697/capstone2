@@ -1,6 +1,43 @@
 @import "../Base/base";
 @import "../Themes/variable";
 
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  &::after{
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: #333;
+  }
+  &:active{
+    background-color: #555;
+  }
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 header {
   background-color: $c1-bg-c;
   .container {
@@ -109,14 +146,13 @@ header {
         position: absolute;
         right: 350px;
         top: 80px;
-        
 
         h3 {
           font-size: $c2-text-s4;
           font-weight: $c1-text-w;
           color: $c2-text-c;
         }
-        p { 
+        p {
           padding: 0 30px 0 0;
           font-size: $c3-text-s2;
           font-weight: $c1-text-w;
@@ -165,8 +201,8 @@ header {
           img {
             margin-top: 50px;
             display: block;
-            width: 220px;
-            height: 156px;
+            width: 100%;
+            height: 160px;
           }
         }
         .col-info {

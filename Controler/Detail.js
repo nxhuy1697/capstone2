@@ -62,8 +62,8 @@ window.onload = function () {
     let htmlRelate = "";
     for (let i = 0; i < ProductRelate.length; i++) {
       htmlRelate += `
-    <div class="col">
-  <div class="col-img"><img src="${ProductRelate[i].image}" alt="" /></div>
+    <div class="col-3">
+  <div class="col-img"><img src="${ProductRelate[i].image}" alt=""  /></div>
   <div class="col-info">
     <h4 class="brand">${ProductRelate[i].name}</h4>
     <p class="descript">${ProductRelate[i].shortDescription}</p>
