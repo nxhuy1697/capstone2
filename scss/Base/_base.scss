@@ -25,3 +25,117 @@ button {
 a:hover {
   color:$c1-text-c ;
 }
+
+.footer {
+  padding: 15px 0 0 0;
+  position: relative;
+  margin-top: 30px;
+
+.container {
+  max-width: initial;
+  padding: 0;
+  .footer_top {
+    display: flex;
+    background-color: #f8f8f8;
+    padding: 0 130px;
+    .row{
+      width: 100%;
+      .col {
+          padding: 15px 0px;
+          h1 {
+            font-weight: 300;
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          p {
+            font-weight: 200;
+  
+            font-size: 12px;
+            margin-bottom: 5px;
+          }
+          a {
+            font-weight: 200;
+            font-size: 12px;
+            color: red;
+          }
+        }
+        .col_1 {
+          flex: 0 0 30%;
+          .text{
+              padding:0 10px;
+          }
+        }
+        .col_2 {
+          flex: 0 0 20%;
+          .text {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            padding:0 10px;
+          }
+        }
+        .col_3 {
+          flex: 0 0 50%;
+
+          .text {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            padding:0 10px;
+          }
+        }
+    }
+  }
+  .footer_bot {
+    display: flex;
+    background-color: #dedddc;
+    padding: 0 130px;
+    .row{
+      width: 100%;
+      .col {
+          padding: 15px 0px;
+          h1 {
+            font-weight: 300;
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          p {
+            font-weight: 200;
+  
+            font-size: 12px;
+            margin-bottom: 5px;
+          }
+          a {
+            font-weight: 200;
+            font-size: 12px;
+            color: red;
+          }
+        }
+        .col_1 {
+          flex: 0 0 30%;
+
+          .text{
+              padding:0 10px;
+          }
+        }
+        .col_2 {
+          flex: 0 0 20%;
+
+          .text {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            padding:0 10px;
+          }
+        }
+        .col_3 {
+          flex: 0 0 50%;
+
+          .text {
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            padding:0 10px;
+          }
+        }
+    }
+  }
+}
+i{
+  position: absolute;
+  top: 225px;
+  right: 80px;
+}
+}

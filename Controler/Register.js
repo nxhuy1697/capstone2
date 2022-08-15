@@ -60,7 +60,7 @@ function validition() {
       inpEmail.validity.typeMismatch ||
       inpEmail.validity.patternMismatch
     ) {
-      spanEmail.innerHTML = "Email không đúng địng dạng !";
+      spanEmail.innerHTML = "Email không đúng định dạng !";
     } else {
       spanEmail.innerHTML = "";
     }
