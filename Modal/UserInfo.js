@@ -1,8 +1,9 @@
-export default function getUserInfo() {
-  let email = "";
-  let password = "";
-  let passwordConfirm = "";
-  let name = "";
-  let phone = "";
-  let gender = "";
+export class User {
+  email = "";
+  password = "";
+  passwordConfirm = "";
+  name = "";
+  gender = true; // true: nam , false: nữ
+  phone = "";
 }
+

@@ -76,39 +76,66 @@
       </nav>
     </div>
     <!-- register -->
-    <div class="register">
+    <div class="register" id="register">
       <div class="container">
         <div class="title">
           <p>Register</p>
         </div>
-        <form action="">
+        <form action="" id="formRegister">
           <div class="reg-content">
             <div class="reg-left">
               <div class="input">
-                <input id="email" placeholder="Email" />
-                <span>(*)</span>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email@gmail.com"
+                  required
+                  name="text"
+                  id="field-text"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                />
+                <span class="text-danger" id="form-message-email"></span>
               </div>
               <div class="input">
-                <input id="password" type="Password" placeholder="Password" />
-                <span>(*)</span>
+                <input
+                  id="password"
+                  type="Password"
+                  placeholder="Password"
+                  required
+                  name="text"
+                  placeholder="P@ss123"
+                  id="field-text"
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                  title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
+                />
+                <span class="text-danger" id="form-message-password"></span>
               </div>
               <div class="input">
                 <input
                   id="passwordConfirm"
                   type="Password"
                   placeholder="Password Confirm"
+                  required
+                  name="text"
+                  id="field-text"
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                  title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
                 />
-                <span>(*)</span>
+                <span class="text-danger" id="form-message-passwordConfirm"></span>
               </div>
             </div>
             <div class="reg-right">
               <div class="input">
-                <input id="name" placeholder="Name" />
-                <span>(*)</span>
+                <input id="name" placeholder="Name" required id="field-text"
+                title="Tên phải có dấu"
+                pattern="[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$"/>
+                <span class="text-danger" id="form-message-name"></span>
               </div>
               <div class="input">
-                <input id="phone" placeholder="Phone" />
-                <span>(*)</span>
+                <input id="phone" placeholder="Phone"
+                required name="text" placeholder="0354.XXX.XXX"
+                pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b" />
+                <span class="text-danger" id="form-message-phone"></span>
               </div>
               <div class="gender">
                 <span>Gender</span>
@@ -127,6 +154,9 @@
     </div>
 
     <!-- Bootstrap JavaScript Libraries -->
+    <footer>
+      <img src="./img/image 7.png" alt="" />
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
       integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
